@@ -75,13 +75,13 @@
         app:srcCompat="@drawable/quinceanios" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextP"
         android:layout_width="350dp"
         android:layout_height="68dp"
         android:layout_marginBottom="28dp"
         android:ems="10"
+        android:hint="Nombre Personalizado"
         android:inputType="text"
-        android:text="Nombre Personalizado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

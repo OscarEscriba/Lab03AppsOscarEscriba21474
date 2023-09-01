@@ -4,6 +4,8 @@ import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     var ImageView3: ImageView?=null
     var ImageView4: ImageView?=null
     var ImageView5: ImageView?=null
+    private var txtn1:EditText?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         ImageView4 = findViewById(R.id.imageView15)
         ImageView5 = findViewById(R.id.imageView16)
         */
+        //la informacion guardada en el edit text...
         //actividad de los botones...
         val botonNavidad: ImageView = findViewById(R.id.imageView16)
         botonNavidad.setOnClickListener{
@@ -44,27 +48,37 @@ class MainActivity : AppCompatActivity() {
         botonQuince.setOnClickListener {
             openLayoutQuince()
         }
+        txtn1  = findViewById(R.id.editTextP)
     }
     //las funciones para abrir la nueva activity...
     private fun openLayoutNavidad() {
+        var dato1=txtn1?.text.toString()
         val intent = Intent(this,MainActivity2:: class.java)
+        intent.putExtra("Texto",dato1)
         startActivity(intent)
     }
     private fun openLayoutAnioNuevo() {
         val intent = Intent(this,anionuevo:: class.java)
+        var dato1=txtn1?.text.toString()
+        intent.putExtra("Texto",dato1)
         startActivity(intent)
     }
     private fun openLayoutGraduacion() {
         val intent = Intent(this,graduacion:: class.java)
+        var dato1=txtn1?.text.toString()
+        intent.putExtra("Texto",dato1)
         startActivity(intent)
     }
     private fun openLayoutBoda() {
         val intent = Intent(this,boda:: class.java)
+        var dato1=txtn1?.text.toString()
+        intent.putExtra("Texto",dato1)
         startActivity(intent)
     }
     private fun openLayoutQuince() {
         val intent = Intent(this,quinceanios:: class.java)
+        var dato1=txtn1?.text.toString()
+        intent.putExtra("Texto",dato1)
         startActivity(intent)
     }
-
 }
