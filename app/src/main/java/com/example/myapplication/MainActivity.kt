@@ -66,5 +66,5 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,quinceanios:: class.java)
         startActivity(intent)
     }
-    
+
 }
